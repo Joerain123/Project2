@@ -1,0 +1,6 @@
+<launch>
+  <!--启动颜色过滤脚本-->
+  <node pkg="proj02_follow_bot" name="follower_color_filter" type="follower_color_filter.py" output="screen" />
+  <!--启动RViz-->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find proj02_follow_bot)/include/proj02_follow_bot/follower_color_filter.rviz" required="true" />
+</launch>

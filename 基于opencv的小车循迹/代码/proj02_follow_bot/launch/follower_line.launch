@@ -1,0 +1,6 @@
+<launch>
+  <!--启动线条跟踪脚本-->
+  <node pkg="proj02_follow_bot" name="follower_line" type="follower_line.py" output="screen" />
+  <!--启动RViz-->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find proj02_follow_bot)/include/proj02_follow_bot/follower_line.rviz" required="true" />
+</launch>

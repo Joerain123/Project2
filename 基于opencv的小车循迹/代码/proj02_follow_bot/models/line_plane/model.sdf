@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.4">
+   <model name="line_plane">
+      <pose>1 2.3 -.1 0 0 0</pose>
+      <static>1</static>
+      <link name="ground">
+         <collision name="ground_coll">
+            <geometry>
+              <box>
+                <size>10 10 .1</size>
+              </box>
+            </geometry>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+            </surface>
+         </collision>
+         <visual name="ground_vis">
+            <cast_shadows>false</cast_shadows>
+            <geometry>
+              <box>
+                <size>10 10 .1</size>
+              </box>
+            </geometry>
+            <material>
+               <script>
+                  <uri>model://line_plane/materials/scripts/linePlane.material</uri>
+                  <uri>model://line_plane/materials/textures/linePlane.png</uri>
+                  <name>linePlane/Image</name>
+               </script>
+            </material>
+         </visual>
+      </link>
+   </model>
+</sdf>
